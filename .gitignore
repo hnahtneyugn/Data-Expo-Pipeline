@@ -1,0 +1,16 @@
+*.csv
+*.csv.gz
+*.csv.bz2
+*.parquet
+.DS_Store
+.idea
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
+**logs/
+**.env
+**__pycache__/
+.history
+terraform.tfvars
+*.json
