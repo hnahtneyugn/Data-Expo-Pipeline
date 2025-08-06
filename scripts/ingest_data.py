@@ -31,6 +31,22 @@ information_url = {"XTPZZY": "airports", "3NOQ6Q": "carriers", "XXSL8A": "plane"
 
 
 def download_yearly_file(year_hash: str):
+    """
+    Download BZ2 files, then extract them to get CSV files.
+
+    Parameters
+    --------
+    year_hash: str
+        A string key corresponding to the date value in data_url dict.
+    
+    Returns
+    --------
+    csv_path: str
+        If path to CSV file is available, return it.
+    None
+        If there is an exception.
+    """
+
     url = BASEURL + year_hash
     bz2_path = os.path.join(DOWNLOAD_DIR, f"{data_url[year_hash]}_data.csv.bz2")
     csv_path = os.path.join(DOWNLOAD_DIR, f"{data_url[year_hash]}_data.csv")
@@ -62,6 +78,22 @@ def download_yearly_file(year_hash: str):
 
 
 def download_information_file(hash: str):
+    """
+    Download CSV helper files that contain detailed information.
+
+    Parameters
+    --------
+    hash: str
+        A string key corresponding to the name value in information_url dict.
+    
+    Returns
+    --------
+    csv_path: str
+        If path to CSV file is available, return it.
+    None
+        If there is an exception.
+    """
+
     url = BASEURL + hash
     csv_path = os.path.join(DOWNLOAD_DIR, f"{information_url[hash]}_data.csv")
     try:
@@ -120,6 +152,19 @@ def create_bucket(bucket_name: str):
 
 
 def upload_to_gcs(file_path, bucket, max_retries=3):
+    """
+    Upload files from local to Google Cloud Storage (GCS).
+
+    Parameters
+    --------
+    file_path: str
+        Path to the CSV file to upload.    
+    bucket: google.cloud.storage.bucket.Bucket
+        A bucket matching the name provided.
+    max_retries: int
+        Number of retries in case uploading fails.
+    """
+
     blob_name = os.path.basename(file_path)
     blob = bucket.blob(blob_name)
     blob.chunk_size = CHUNK_SIZE 
@@ -144,6 +189,15 @@ def upload_to_gcs(file_path, bucket, max_retries=3):
 
 
 def remove_files(dir_path):
+    """
+    Remove the directory containing all the CSV files after uploading to GCS.
+
+    Parameters
+    --------
+    dir_path: str
+        Path to the directory.
+    """
+
     if os.path.exists(dir_path):
         shutil.rmtree(dir_path)
         print(f"Removed directory: {dir_path}")
@@ -151,21 +205,21 @@ def remove_files(dir_path):
         print(f"Directory does not exist: {dir_path}")
 
 
-with ThreadPoolExecutor(max_workers=4) as executor:
-    yearly_files = list(executor.map(download_yearly_file, data_url.keys()))
-
-with ThreadPoolExecutor(max_workers=4) as executor:
-    info_files = list(executor.map(download_information_file, information_url.keys()))
-
-all_files = list(filter(None, yearly_files + info_files))
-
-with ThreadPoolExecutor(max_workers=4) as executor:
-    futures = [executor.submit(upload_to_gcs, path, create_bucket(BUCKET_NAME)) for path in all_files]
-    for future in futures:
-        future.result()
-
-
 if __name__ == "__main__":
-    
+    # Download data concurrently
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        yearly_files = list(executor.map(download_yearly_file, data_url.keys()))
+
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        info_files = list(executor.map(download_information_file, information_url.keys()))
+
+    all_files = list(filter(None, yearly_files + info_files))
+
+    # Upload data concurrently
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        futures = [executor.submit(upload_to_gcs, path, create_bucket(BUCKET_NAME)) for path in all_files]
+        for future in futures:
+            future.result()
+
     remove_files("./tmp/")
 
