@@ -28,7 +28,13 @@ variable "gcs_bucket_name" {
   type        = string
 }
 
+variable "bq_temp_bucket_name" {
+  description = "My Temporary GCS Bucket Name"
+  type        = string
+}
+
 variable "gcs_storage_class" {
   description = "Bucket Storage Class"
   type        = string
 }
+

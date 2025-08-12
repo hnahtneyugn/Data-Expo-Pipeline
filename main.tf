@@ -30,6 +30,23 @@ resource "google_storage_bucket" "terraform_data_expo_bucket" {
   }
 }
 
+resource "google_storage_bucket" "bigquery_temp_bucket" {
+  name          = var.bq_temp_bucket_name
+  location      = var.location
+  force_destroy = true
+
+  uniform_bucket_level_access = true
+
+  lifecycle_rule {
+    condition {
+      age = 7 
+    }
+    action {
+      type = "Delete"
+    }
+  }
+}
+
 
 resource "google_bigquery_dataset" "terraform_data_expo_dataset" {
   dataset_id = var.bq_dataset_name
