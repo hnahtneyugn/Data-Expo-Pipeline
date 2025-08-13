@@ -16,3 +16,4 @@ terraform.tfvars
 *.json
 .ipynb_checkpoints
 artifacts/
+.vscode/
