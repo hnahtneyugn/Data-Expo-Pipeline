@@ -31,8 +31,6 @@ spark._jsc.hadoopConfiguration().set('google.cloud.auth.service.account.json.key
 # Read from CSV files
 bucket_name = "data_expo_bucket"
 files = [f"gs://{bucket_name}/{year}_data.csv" for year in range(2000, 2009)]
-files
-
 
 df = spark.read.option("header", "true").csv(files)
 
@@ -168,7 +166,7 @@ int_cols = [
 ]
 
 
-# Convert type
+# Convert columns to int
 for c in int_cols:
     df_parquet = df_parquet.withColumn(c, sf.col(c).cast("int"))
 

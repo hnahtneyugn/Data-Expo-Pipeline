@@ -1,14 +1,11 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.decorators import dag, task
 from datetime import datetime
 import pyspark
 from pyspark.sql import SparkSession
 from pyspark.conf import SparkConf
 from pyspark.context import SparkContext
 from pyspark.sql import functions as sf
-
-
 
 def etl_airports():
 
@@ -33,8 +30,9 @@ def etl_airports():
     bucket_name = "data_expo_bucket"
     file_name = "airports_data.csv"
     file_path = f"gs://{bucket_name}/{file_name}"
-
     airports_data = spark.read.option("inferSchema", "true").option("header", "true").csv(file_path)
+
+    # Modify columns' names
     airports_data = airports_data.withColumnRenamed("iata", "IATA").withColumnRenamed("lat", "latitude").withColumnRenamed("long", "longitude")
 
     # Create mapping to fill in NA values
@@ -66,7 +64,7 @@ def etl_airports():
 with DAG(
     dag_id='airports_data_gcs_bigquery',
     schedule=None,
-    start_date=datetime(2025, 8, 14),
+    start_date=datetime(2025, 8, 15),
     catchup=False,
     tags=['GCS', 'BigQuery', 'ETL']
 ) as dag:
