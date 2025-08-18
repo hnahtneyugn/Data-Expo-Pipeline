@@ -38,3 +38,7 @@ variable "gcs_storage_class" {
   type        = string
 }
 
+variable "bq_tableau_dataset_name" {
+  description = "Bucket Storage Class"
+  type        = string
+}
