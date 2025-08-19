@@ -53,27 +53,3 @@ resource "google_bigquery_dataset" "terraform_data_expo_dataset" {
   location   = var.location
 }
 
-resource "google_bigquery_dataset" "tableau_bigquery_dataset" {
-  dataset_id = var.bq_tableau_dataset_name
-  location   = var.location
-}
-
-resource "google_bigquery_dataset" "tableau_bigquery_dataset_delay" {
-  dataset_id = var.bq_tableau_dataset_name_delay
-  location   = var.location
-}
-
-resource "google_bigquery_dataset" "tableau_bigquery_dataset_metrics" {
-  dataset_id = var.bq_tableau_dataset_name_metrics
-  location   = var.location
-}
-
-resource "google_bigquery_dataset" "tableau_bigquery_dataset_geospatial" {
-  dataset_id = var.bq_tableau_dataset_name_geospatial
-  location   = var.location
-}
-
-resource "google_bigquery_dataset" "tableau_bigquery_dataset_quality" {
-  dataset_id = var.bq_tableau_dataset_name_quality
-  location   = var.location
-}

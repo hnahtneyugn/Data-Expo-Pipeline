@@ -38,27 +38,4 @@ variable "gcs_storage_class" {
   type        = string
 }
 
-variable "bq_tableau_dataset_name" {
-  description = "Bucket Storage Class"
-  type        = string
-}
 
-variable "bq_tableau_dataset_name_delay" {
-  description = "Bucket Storage Class"
-  type        = string
-}
-
-variable "bq_tableau_dataset_name_metrics" {
-  description = "Bucket Storage Class"
-  type        = string
-}
-
-variable "bq_tableau_dataset_name_geospatial" {
-  description = "Bucket Storage Class"
-  type        = string
-}
-
-variable "bq_tableau_dataset_name_quality" {
-  description = "Bucket Storage Class"
-  type        = string
-}
