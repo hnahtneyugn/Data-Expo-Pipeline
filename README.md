@@ -2,6 +2,21 @@
 
 <a id="readme-top"></a>
 
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-this-project">About This Project</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#prerequisite">Prerequisite</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
 ## About this project
 
 Data Expo Pipeline is an end-to-end data pipeline for the Data Exposition 2009 challenge. It demonstrates modern data engineering practices, including data ingestion through web crawling, orchestration with Apache Airflow, and scalable processing on the Google Cloud Platform.
