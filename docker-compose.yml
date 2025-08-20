@@ -48,7 +48,7 @@ x-airflow-common:
 
 services:
   spark-master:
-    image: spark_base_image:v1
+    image: hnahtneyugn/spark_base_image:v1
     container_name: de-spark-master
     environment:
       - SPARK_MODE=master
@@ -71,7 +71,7 @@ services:
       - sparkjob-network
 
   spark-worker:
-    image: spark_base_image:v1
+    image: hnahtneyugn/spark_base_image:v1
     container_name: de-spark-worker
     environment:  
       - SPARK_MODE=worker
@@ -94,7 +94,7 @@ services:
       - sparkjob-network
 
   jupyter:
-    image: jupyter_base_image:v1
+    image: hnahtneyugn/jupyter_base_image:v1
     container_name: jupyter-for-spark
     ports:
       - '8888:8888'
