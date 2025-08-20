@@ -11,6 +11,7 @@ Built with Docker for reproducibility, the pipeline is easy to deploy and extend
 Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux
 
 <p align="right"><a href="#readme-top">back to top</a></p>
+
 ## Technologies Used
 
 Below are the technologies / frameworks used in this project. 
@@ -23,7 +24,9 @@ Below are the technologies / frameworks used in this project.
 - **Apache Airflow**  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
 - **Google Cloud Platform** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
 - **Tableau** <img src="https://www.svgrepo.com/download/354428/tableau-icon.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px" />
+
 <p align="right"><a href="#readme-top">back to top</a></p>
+
 ## Prerequisite
 
 In order to run / replicate this project from the beginning, you need to have:
@@ -63,6 +66,7 @@ on linux_amd64
 - Docker is also required to run this project. Install Docker Desktop and read the instructions for Docker with WSL [here](https://docs.docker.com/desktop/features/wsl/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
+
 ## Getting Started
 
 1. Clone the repository
@@ -134,15 +138,15 @@ docker-compose up -d
 ## Usage 
 
 **Crawl data from the web, ingest data into GCS bucket:**
-![[Pasted image 20250820164613.png|1000]]
+![GCS image](./assets/images/Pasted_image_20250820164613.png)
 
 
 **Data after being processed with Apache Spark will be uploaded to a BigQuery dataset:**
-![[Pasted image 20250820165325.png|1000]]
+![BigQuery image](./assets/images/Pasted_image_20250820165325.png)
 
 
 **Visualize data using Tableau:**
-![[dashboards/Extra_Analysis_Dashboard.pdf]]
+[![Dashboard Preview](./assets/images/dashboard.png)](./dashboards/Extra_Analysis_Dashboard.pdf)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -168,14 +172,8 @@ Distributed under the MIT License.
 
 ## Contact
 
-Ta Nguyen Thanh:    <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-light.svg" height="30" style="vertical-align:middle; margin-left:4px">   <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/facebook-light.svg" height="30" style="vertical-align:middle; margin-left:4px">   <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/instagram-light.svg" height="30" style="vertical-align:middle; margin-left:4px">    <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/linkedin-light.svg" height="30" style="vertical-align:middle; margin-left:4px">    <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/gmail-light.svg" height="30" style="vertical-align:middle; margin-left:4px">
+Ta Nguyen Thanh: [<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-light.svg" height="30" style="vertical-align:middle; margin-left:10px">](https://github.com/hnahtneyugn) [<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/facebook-light.svg" height="30" style="vertical-align:middle; margin-left:10px">](https://www.facebook.com/godsendparanoia/) [<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/instagram-light.svg" height="30" style="vertical-align:middle; margin-left:10px">](https://www.instagram.com/tngtwx_/) [<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/linkedin-light.svg" height="30" style="vertical-align:middle; margin-left:10px">](https://www.linkedin.com/in/tanguyenthanh/) [<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/gmail-light.svg" height="30" style="vertical-align:middle; margin-left:10px">](mailto:tanguyenthanh1969@gmail.com)
 
 Project Link: https://github.com/hnahtneyugn/Data-Expo-Pipeline
 
 <p align="right"><a href="#readme-top">back to top</a></p>
-
-
-
-
-[<img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-light.svg" height="30" style="vertical-align:middle; margin-left:4px">](https://github.com/yourusername)
-
