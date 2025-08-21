@@ -31,14 +31,14 @@ Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux
 
 Below are the technologies / frameworks used in this project. 
 
-- **Python** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Terraform**<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Jupyter Notebook** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Docker** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Apache Spark** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Apache Airflow**  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Google Cloud Platform** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px"/>
-- **Tableau** <img src="https://www.svgrepo.com/download/354428/tableau-icon.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px" />
+- **Python** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://www.python.org/)
+- **Terraform** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://developer.hashicorp.com/terraform)
+- **Jupyter Notebook** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://jupyter.org/)
+- **Docker** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://www.docker.com/)
+- **Apache Spark** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://spark.apache.org/)
+- **Apache Airflow** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://airflow.apache.org/)
+- **Google Cloud Platform** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://cloud.google.com/)
+- **Tableau** [<img src="https://www.svgrepo.com/download/354428/tableau-icon.svg" height=30 width=30 style="vertical-align:middle; margin-left:4px" height=30 width=30 style="vertical-align:middle; margin-left:10px"/>](https://www.tableau.com/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
