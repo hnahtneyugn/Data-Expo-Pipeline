@@ -23,7 +23,7 @@ Data Expo Pipeline is an end-to-end data pipeline for the Data Exposition 2009 c
 
 Built with Docker for reproducibility, the pipeline is easy to deploy and extend. It ingests raw flight data, processes and transforms it, stores it in BigQuery, and finally powers interactive dashboards for analysis. While this project focuses on the 2009 dataset, it provides a reusable framework for large-scale analytics in domains such as transport, healthcare, or e-commerce.
 
-Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux
+Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -54,7 +54,7 @@ In order to run / replicate this project from the beginning, you need to have:
 	- Storage Object Admin
 	- BigQuery Admin
 	- Dataproc Administrator
-- A project to start with.
+- A Google Cloud project to start with.
 - Miniconda3 installed. 
 - Required libraries installed
 ```sh
@@ -78,18 +78,18 @@ on linux_amd64
 + provider registry.terraform.io/hashicorp/google v5.6.0
 ```
 
-- Docker is also required to run this project. Install Docker Desktop and read the instructions for Docker with WSL [here](https://docs.docker.com/desktop/features/wsl/)
+- Docker is also required to run this project. Install Docker Desktop and read the instructions for Docker with WSL [here](https://docs.docker.com/desktop/features/wsl/).
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository.
 ```sh
 git clone https://github.com/github_username/repo_name.git
 ```
 
-2. Modify Terraform variables in `main.tf`, `variables.tf` and `terraform.tfvars`
+2. Modify Terraform variables in `main.tf`, `variables.tf` and `terraform.tfvars`.
 3. Use Terraform to create Google Cloud Storage (GCS) buckets and Google BigQuery datasets.
 ```sh
 terraform init
@@ -134,7 +134,7 @@ services:
 AIRFLOW_IMAGE_NAME=hnahtneyugn/airflow_base_image:v1
 ```
 
-7. Start Docker
+7. Start Docker.
 ```sh
 docker-compose up -d
 ```
