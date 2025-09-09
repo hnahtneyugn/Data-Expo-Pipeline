@@ -23,7 +23,7 @@ Data Expo Pipeline is an end-to-end data pipeline for the Data Exposition 2009 c
 
 Built with Docker for reproducibility, the pipeline is easy to deploy and extend. It ingests raw flight data, processes and transforms it, stores it in BigQuery, and finally powers interactive dashboards for analysis. While this project focuses on the 2009 dataset, it provides a reusable framework for large-scale analytics in domains such as transport, healthcare, or e-commerce.
 
-Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux.
+Data Expo Pipeline is built using Ubuntu-24.04 on Windows Subsystem Linux. This is the project I made after enrolling in the Data Engineering Zoomcamp from DataTalksClub.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
